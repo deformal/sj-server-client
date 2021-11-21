@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "sets up a client and a server with express backend and react",
   "main": "main.js",
+  "bin":"./bin/cli.js",
   "scripts": {
     "test": "test"
   },
