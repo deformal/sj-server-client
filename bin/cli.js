@@ -38,6 +38,6 @@ if (!deleteBins) process.exit(-1)
 if (!installedDeps) process.exit(-1)
 if (!installedDeps2) process.exit(-1)
 
-console.log('Thank you for using tgp, template. Happy coding 🚀');
+console.log('Thank you for using sj-server-client, template. Happy coding 🚀');
 console.log(`cd ${reppoName}/client && yarn`);
 console.log(`cd ${reppoName}/server && yarn or npm i `);
