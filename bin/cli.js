@@ -17,6 +17,7 @@ const gitCheckOut = `git clone  https://github.com/deformal/sj-server-client.git
 const deleteBin = `cd ${reppoName} && rm -rf bin`
 const installDepsCommand = `cd ${reppoName}/client && yarn`;
 const installDepsCommand2 = `cd ${reppoName}/server && yarn`;
+const deletingGitRepo = `rm -rf .git`
 console.log(`Cloning the repository with name ${reppoName}`);
 const checkOut = runCommand(gitCheckOut);
 if (!checkOut) process.exit(-1);
@@ -30,9 +31,12 @@ console.log(`Installing dependencies for ${reppoName}}`);
 const deleteBins = runCommand(deleteBin);
 const installedDeps = runCommand(installDepsCommand);
 const installedDeps2 = runCommand(installDepsCommand2);
-if(!deleteBins) process.exit(-1)
+const deleteGit = runCommand()
+
+if (!deleteGit) process.exit(-1)
+if (!deleteBins) process.exit(-1)
 if (!installedDeps) process.exit(-1);
-if(!installedDeps2) process.exit(-1)
+if (!installedDeps2) process.exit(-1)
 console.log('Thank you for using tgp, template. Happy coding 🚀');
 console.log(`cd ${reppoName}/client && yarn`);
 console.log(`cd ${reppoName}/server && yarn or npm i `);

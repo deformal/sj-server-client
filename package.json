@@ -5,7 +5,9 @@
   "main": "main.js",
   "bin": "./bin/cli.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev:server": "sh .server.sh",
+    "dev:client": "sh .client.sh"
   },
   "keywords": [
     "react",
@@ -15,5 +17,8 @@
   ],
   "repository": "https://github.com/deformal/sj-server-client",
   "author": "saurabhjainwal",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
