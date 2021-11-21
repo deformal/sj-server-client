@@ -17,7 +17,7 @@ const gitCheckOut = `git clone  https://github.com/deformal/sj-server-client.git
 const deleteBin = `cd ${reppoName} && rm -rf bin`
 const installDepsCommand = `cd ${reppoName}/client && yarn`;
 const installDepsCommand2 = `cd ${reppoName}/server && yarn`;
-const deletingGitRepo = `rm -rf .git`
+const deletingGitRepo = `cd ${reppoName}&& rm -rf .git`
 console.log(`Cloning the repository with name ${reppoName}`);
 const checkOut = runCommand(gitCheckOut);
 if (!checkOut) process.exit(-1);
