@@ -21,17 +21,16 @@ const deletingGitRepo = `rm -rf .git`
 console.log(`Cloning the repository with name ${reppoName}`);
 const checkOut = runCommand(gitCheckOut);
 if (!checkOut) process.exit(-1);
-const deleteWorkflowDir = runCommand("rm -rf .github/*")
+const deleteWorkflowDir = runCommand("rm -rf .git/*")
 if (!deleteWorkflowDir)
 {
   console.error("Problem while generating template")
   process.exit(-1)
 }
 console.log(`Installing dependencies for ${reppoName}}`);
-const deleteBins = runCommand(deleteBin);
+const deleteBins = runCommand(deletingGitRepo);
 const installedDeps = runCommand(installDepsCommand);
 const installedDeps2 = runCommand(installDepsCommand2);
-const deleteGit = runCommand()
 
 if (!deleteGit) process.exit(-1)
 if (!deleteBins) process.exit(-1)
