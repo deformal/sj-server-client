@@ -28,14 +28,16 @@ if (!deleteWorkflowDir)
   process.exit(-1)
 }
 console.log(`Installing dependencies for ${reppoName}}`);
-const deleteBins = runCommand(deletingGitRepo);
+const deleteGit = runCommand(deletingGitRepo);
 const installedDeps = runCommand(installDepsCommand);
 const installedDeps2 = runCommand(installDepsCommand2);
+const deleteBins = runCommand(deleteBin)
 
 if (!deleteGit) process.exit(-1)
 if (!deleteBins) process.exit(-1)
-if (!installedDeps) process.exit(-1);
+if (!installedDeps) process.exit(-1)
 if (!installedDeps2) process.exit(-1)
+
 console.log('Thank you for using tgp, template. Happy coding 🚀');
 console.log(`cd ${reppoName}/client && yarn`);
 console.log(`cd ${reppoName}/server && yarn or npm i `);

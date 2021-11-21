@@ -1,6 +1,6 @@
 {
   "name": "sj-server-client",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "sets up a client and a server with express backend and react",
   "main": "main.js",
   "bin": "./bin/cli.js",
