@@ -1,0 +1,17 @@
+{
+  "name": "sj-server-client",
+  "version": "0.0.1",
+  "description": "sets up a client and a server with express backend and react",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "client",
+    "server"
+  ],
+  "author": "saurabhjainwal",
+  "license": "ISC"
+}
